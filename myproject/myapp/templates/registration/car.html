@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car</title>
+</head>
+<body>
+ {% if user.is_authenticated %}
+  Hi {{ user.username }}! <br>
+  <h1>Car</h1>
+  <button><a href="{% url 'profile'%}">Go to profile.</a></button>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+ {% endif %}
+
+</body>
+</html>

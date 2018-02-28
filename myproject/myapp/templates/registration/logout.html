@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {margin: 0;}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+.content {
+	padding-top: 20px;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+</style>
+</head>
+<body>
+
+<ul class="topnav">
+  <li><a href="{% url 'home' %}">Home</a></li>
+  <li><a href="{% url 'carlist' %}">Car</a></li>
+  <li><a href="{% url 'rent' %}">Rent</a></li>
+  <!--<li><a href="{% url 'person' %}">Profile</a></li>-->
+  <li class="right"><a href="{% url 'login' %}">Log in</a></li>
+</ul>
+
+<br><br>
+
+<center>
+	<h1>Logged out!</h1>  
+
+	<button class="button button2"><a href="{% url 'login' %}">Click here to Login again</a></button>
+
+</center>
+
+
+</body>
+</html>

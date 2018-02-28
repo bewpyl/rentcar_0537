@@ -1,0 +1,21 @@
+{% block content %}
+
+<h1>Rent list</h1>
+
+
+   {% for r in object_list %}
+
+  	<p> user: {{r.user}} </p>
+  	<p> car: {{r.car}}</p> 
+  	<p> startdate and time: {{r.start_datetime}}</p>
+  	<p> returndate and time: {{r.stop_datetime}}</p> 
+  	<p> fee: {{r.fee}}</p>
+  	<p>---------------------------------</p>
+
+{% empty %}
+
+	<p> No Rent!!</p>
+
+{% endfor %}
+
+{% endblock %}
